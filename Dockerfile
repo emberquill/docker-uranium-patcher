@@ -1,9 +1,12 @@
-FROM python:3.9-alpine
+FROM python:3.9
 
 ENV TZ="US/Eastern"
 VOLUME [ "/data" ] 
-RUN apk update; \
-    apk add curl sudo unrar
+RUN apt-get update; \
+    apt-get -y upgrade; \
+    apt-get -y install curl sudo unrar-free
+RUN pip install future tqdm requests
 COPY startup.sh /opt/startup.sh
 
-ENTRYPOINT ["/opt/startup.sh"]
+CMD [ "/bin/bash", "/opt/startup.sh"]
+# ENTRYPOINT [ "/bin/sh" ]
