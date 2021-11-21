@@ -1,7 +1,7 @@
 name: 'Build'
 
 on:
-  commit:
+  push:
     branches:
       - master
 
