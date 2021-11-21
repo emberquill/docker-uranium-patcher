@@ -1,5 +1,5 @@
 # docker-uranium-patcher
-Patcher for Pokemon Uranium in a Docker container.
+[Pokemon Uranium Shellpatcher](https://github.com/AnzoDK/uranium-shellpatch) in a docker container.
 
 ## Usage
 
