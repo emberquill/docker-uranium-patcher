@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /data
-mkdir rar
-ln -s /usr/bin/unrar rar/unrar 
+mkdir /data/rar
+ln -s /usr/bin/unrar /data/rar/unrar 
 curl https://raw.githubusercontent.com/AnzoDK/uranium-shellpatch/master/patcher-start.sh | bash
-rm rar/unrar
-rmdir rar
+rm /data/rar/unrar
+rmdir /data/rar
