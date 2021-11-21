@@ -1,5 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 cd /data
-curl https://raw.githubusercontent.com/AnzoDK/uranium-shellpatch/master/patcher-start.sh -o patcher.sh
-chmod +x patcher.sh
-./patcher.sh
+mkdir rar
+ln -s /usr/bin/unrar rar/unrar 
+curl https://raw.githubusercontent.com/AnzoDK/uranium-shellpatch/master/patcher-start.sh | bash
+rm rar/unrar
+rmdir rar
